@@ -29,7 +29,7 @@ async function iniciarServidor(){
     try {
         await correrBaseDatos();
         app.listen(3001, ()=>{
-            signale.success("Servidor corriendo en el puerto 3000");
+            signale.success("Servidor corriendo en el puerto 3001");
         })
     } catch (error) {
         signale.error("Error al iniciar el servidor", error);

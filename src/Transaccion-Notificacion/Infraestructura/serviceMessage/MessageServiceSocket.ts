@@ -4,7 +4,7 @@ import { IMessageService } from "../../Aplicacion/service/IMessageService";
 
 export class MessageServiceSocket implements IMessageService{
     enviarMensaje(registro: Registro): string {
-        const socket = io("http://localhost:3002/");
+        const socket = io("https://websocketserver-8vbj.onrender.com");//ruta del socket desplegado
 
         socket.on("connect", ()=>{
             console.log("Conectado al servidor socket");
@@ -19,3 +19,4 @@ export class MessageServiceSocket implements IMessageService{
         return "Mensaje enviado";
     }
 }
+
